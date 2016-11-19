@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+<script type="text/javascript">
+    function work() {
+   //     b = [];
+   //     for (j = 0; j <= 39; j++) { 
+   //     b[0] = []
+        //     }
+        if (list.length == 0) {
+            for (var i = 0; i <= 1; i++) {
+                list.push(i);
+            }
+        }
+        question[2];
+        question[0] = ["text1"];
+        question[1] = ["text2"];
+        var randomKart = list[Math.floor(Math.random() * list.length)];
+        var element = question[randomkart];
+        $(myDiv).adopt(element);
+        list.splice(randomKart, 1);
+            a = [];
+        for (i = 0; i < 6; i++) {
+            a.push();
+            a[0] = ["текст"];
+        }
+  //      var randomKart = b[Math.floor(Math.random() * 40)];
+    //    questions[randomKart];
+
+        res = document.getElementById("res");
+        res.innerHTML = a.toString();
+
+        var message = 'Hello!';
+        alert(message);
+    }
+</script>
+<input id="mybutton" type="button" value="start" onclick="work()" />
+<div id="res">Answer</div>
+</body>
+</html>

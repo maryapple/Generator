@@ -10,3 +10,12 @@ leftsidebar {
    Margin-left: auto;
    Margin-right: auto;
 }
+s1 {
+    font-size: 18px;
+    color: #FF69B4;
+    font-weight: 600;
+    border: 4px double black; /* Параметры границы */
+    border-ground: solid;
+    background: #6A5ACD; 
+    padding: 10px;
+}

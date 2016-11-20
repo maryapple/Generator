@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Untitled Page</title>
+    </head>
+
+    <body>
+    <script type="text/javascript">
+        function work() {
+                A = [];  // создаю пустой массив
+                    for (int i = 0; i < 6; i++) {  // это массив для тех самых рандомный 6 вопросов
+                        A.push();   // добавление каких-то элементов в конец массива
+                    }
+               
+                res = document.getElementById("res");
+                res.innerHTML = a.toString();          
+
+                B = [] ;
+                for (int j = 0; j < 40; j++){  // создаю другой массив из 40 вопросов
+                    B.push(); // добавление каких-то элементов в конец массива
+                    B[0] = ["текст вопроса 1"];  // добавляю в 1-ый элемент массива текст вопроса, но нужно ли это делать ЗДЕСЬ?
+                    B[1] = ["текст вопроса 2"];
+                } 
+                var randomKart1 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 1-ого рандомного элемента массива B
+                var randomKart2 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 2-ого рандомного элемента массива B
+                var randomKart3 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 3-ого рандомного элемента массива B
+                var randomKart4 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 4-ого рандомного элемента массива B
+                var randomKart5 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 5-ого рандомного элемента массива B
+                var randomKart6 = B[Math.floor(Math.random() * 40)];  // randomKart1 - переменная для поиска 6-ого рандомного элемента массива B
+
+                a[0] = randomKart1;  // добавляем данные в массив A
+                a[1] = randomKart2;
+                a[2] = randomKart3;
+                a[3] = randomKart4;
+                a[4] = randomKart5;
+                a[5] = randomKart6;
+
+    </script>
+
+    <input id="mybutton" type="button" value="start" onclick="work()" />   // кнопка start
+    <div id="res">Answer</div>  // Answer должно измениться
+    </body>
+
+</html>

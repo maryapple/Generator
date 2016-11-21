@@ -10,10 +10,13 @@
                 var array_questions = [];
                 array_questions[0] = ["текст вопроса 1"];
                 array_questions[1] = ["текст вопроса 2"];
+                var array = [];
                 var array = [randomQuestion[i]];  // создаю пустой массив для определения 6 случ индексов
-                    for (int i = 0; i < 6; i++) {  // это массив для тех самых рандомный 6 вопросов
-                        var randomQuestion = array.push(Math.floor(Math.random() * 40) );  // добавление случайного элемента в конец массива
-                    }
+                for (int i = 0; i < 6; i++) {  // это массив для тех самых рандомный 6 вопросов
+                    array.push(Math.floor(Math.random() * 40) ); // добавление случайного элемента в конец массива
+                    //var randomQuestion = array.push(Math.floor(Math.random() * 40) );  
+                }
+                array_questions[array[]]; // обращение к i-му индексу
                 res = document.getElementById("res");
     </script>
 

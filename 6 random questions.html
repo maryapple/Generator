@@ -5,23 +5,64 @@
     </head>
 
     <body>
+        <div id="array"></div>
     <script type="text/javascript">
+
+        questions = ["Как дела?", 
+            "Что?", 
+            "Где?", 
+            "Когда?",
+            "Почему?", 
+            "Зачем?", 
+            "Как?", 
+            "c",
+            "a", 
+            "sjdhsdjh", 
+            "aa", 
+            "c",
+            "a", 
+            "sjdhsdjh", 
+            "aa"]
+
         function work() {
-                var array_questions = [];
-                array_questions[0] = ["текст вопроса 1"];
-                array_questions[1] = ["текст вопроса 2"];
-                var array = [];
-                var array = [randomQuestion[i]];  // создаю пустой массив для определения 6 случ индексов
-                for (int i = 0; i < 6; i++) {  // это массив для тех самых рандомный 6 вопросов
-                    array.push(Math.floor(Math.random() * 40) ); // добавление случайного элемента в конец массива
-                    //var randomQuestion = array.push(Math.floor(Math.random() * 40) );  
+                const N = 15;
+                var numbers = [];
+
+                for (i = 0; i < 6; i++) {
+                    n = Math.floor(Math.random() * N) ;
+                    numbers.push(n);
                 }
-                array_questions[array[]]; // обращение к i-му индексу
-                res = document.getElementById("res");
+        
+                r = document.getElementById("array_div");   // ссылка на div в который будет записан массив с рандомными номерами
+                r.innerHTML = "Question numbers <b>" + numbers.join(", ") + "<br/>" + questions.join("<br/>");
+
+
+                r1 = document.getElementById("res1");
+                r1.innerHTML = numbers[0].toString() + ": " + questions[numbers[0]];
+                r2 = document.getElementById("res2");
+                r2.innerHTML =  numbers[1].toString() + ": " + questions[numbers[1]];
+                r3 = document.getElementById("res3");
+                r3.innerHTML =  numbers[2].toString() + ": " + questions[numbers[2]];
+                r4 = document.getElementById("res4");
+                r4.innerHTML =  numbers[3].toString() + ": " + questions[numbers[3]];
+                r5 = document.getElementById("res5");
+                r5.innerHTML =  numbers[4].toString() + ": " + questions[numbers[4]];
+                r6 = document.getElementById("res6");
+                r6.innerHTML =  numbers[5].toString() + ": " + questions[numbers[5]];
+        }
     </script>
 
-    <input id="mybutton" type="button" value="start" onclick="work()" />   
-    <div id="res">Answer</div>  
-    </body>
+    <input id="mybutton" type="button" value="start" onclick="work()" />
+    <div id="array_div">Arraywill be here </div>
+    
+    <hr />
+    <div id="res1">Answer</div>   
+    <div id="res2">Answer</div>   
+    <div id="res3">Answer</div>   
+    <div id="res4">Answer</div>   
+    <div id="res5">Answer</div>   
+    <div id="res6">Answer</div>   
 
+
+    </body>
 </html>

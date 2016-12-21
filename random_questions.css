@@ -1,0 +1,76 @@
+body {
+    padding: 0 0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: white;   /* #819FF7*/
+    font:15px/1.3 'PT Sans', sans-serif;
+    color: #5e5b64;
+    position:relative;
+    z-index:0;
+}
+
+main{
+    position:relative;
+    z-index:1;
+    background-color: #fff;
+    background-image:-webkit-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:-moz-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    padding: 120px 0 600px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #1f2f49;       /* #618ad2; */
+    text-shadow: 2px 2px 0 #cccccc;
+}
+
+table.questions
+{
+    padding:0px;
+    margin: 0px;
+    background: white;
+    border-collapse: collapse;
+}
+
+td.question
+{
+    padding:15px;
+    border: 27px solid #819FF7;  ./*ЦВЕТ РАЗМЕТКИ ТАБЛИЦЫ*/
+    text-align: center;
+    background: #CEE3F6;   /*ЦВЕТ ЯЧЕЕК*/
+}
+pre {
+    padding: 0px;
+    font-size: 14px;
+    line-height: 10px;
+    background: #819FF7;  /*#CEE3F6;#dee6f7;   ОСНОВНОЙ ЦВЕТ ФОНА */
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+}
+#button1{
+    width:445px;
+    height:50px;
+    float: left;
+    background: #C71585; /* Цвет фона */
+    padding: 7px; /* Поля вокруг текста */
+    border: 1px solid #333; /* Параметры рамки */
+}
+#button2{
+    width:485px;
+    height:50px;
+    float:right;
+    background: #C71585; /* Цвет фона */
+    padding: 7px; /* Поля вокруг текста */
+    border: 1px solid #333; /* Параметры рамки */
+}
+
+#res_window{
+    background: black;
+    color: white;
+    position: fixed;
+    top: 100;
+    right: 100;
+    width: 300;
+    border: 3px solid #73AD21;
+  }

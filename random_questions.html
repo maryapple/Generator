@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <title>Генерация паролей</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="function.js"></script>
+    </head>
+    
+    <body onload="work()">
+        <div id="main">
+        <h1>Генератор паролей</h1>
+        </div>
+
+        <h1>Нажми на кнопку для генерации вопросов</h1>
+
+        <table class="questions" width="100%">
+        <tr>
+            <td class="question" width="33%" height="200">
+                <div id="q0" class="q_text">Вопрос 1</div> 
+                <input type="text" id="t0" />
+            </td>
+            <td class="question" width="33%">
+                <div id="q1" class="q_text">Вопрос 2</div>
+                <input type="text" id="t1" />
+            </td>
+            <td class="question" width="33%">
+                <div id="q2" class="q_text">Вопрос 3</div>
+                <input type="text" id="t2" />
+            </td>
+        </tr>
+        <tr>
+            <td class="question" width="33%" height="200">
+                <div id="q3" class="q_text">Вопрос 4</div>
+                <input type="text" id="t3" />
+            </td>
+            <td class="question" width="33%">
+                <div id="q4" class="q_text">Вопрос 5</div>
+                <input type="text" id="t4" />
+            </td>
+            <td class="question" width="33%">
+                <div id="q5" class="q_text">Вопрос 6</div>
+                <input type="text" id="t5" />
+            </td>
+        </tr>
+        </table>
+      
+        <br></br>
+     
+        <div id ="button1"><input type=button value="Сгенерировать новые вопросы!" onclick="work()"></div>
+     
+        <div id ="button2"><input type=button value="Сгенерировать пароль!" onclick="generate_passwords()"></div>
+        
+      <div id="res_window">
+      <p> Предлагаем пароль:
+      <div id="result">1</div>
+        </div>
+    </body> 
+</html>

@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+tr.pass-parts td {
+    font-size: 36px;
+    text-align: center;
+  }
+
+tr.pass-ex td {
+    font-size: 12px;
+    text-align: center;
+}
+#tab11, #tab21 {
+    color: red;
+  }
+#tab12, #tab22 {
+    color: blue;
+  }
+
+body {
+    padding: 0 0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: white;   /* #819FF7*/
+    font:15px/1.3 'PT Sans', sans-serif;
+    color: #5e5b64;
+    position:relative;
+    z-index:0;
+}
+
+main {
+    position:relative;
+    z-index:1;
+    background-color: #fff;
+    background-image:-webkit-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:-moz-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    padding: 120px 0 600px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #1f2f49;       /* #618ad2; */
+    text-shadow: 2px 2px 0 #cccccc;
+    text-align:center;
+}
+
+table.questions {
+    padding:0px;
+    margin: 0px;
+    background: white;
+    border-collapse: collapse;
+}
+
+td.question {
+    padding:15px;
+    border: 27px solid #819FF7;  ./*ÖÂÅÒ ÐÀÇÌÅÒÊÈ ÒÀÁËÈÖÛ*/
+    text-align: center;
+    background: #CEE3F6;   /*ÖÂÅÒ ß×ÅÅÊ*/
+}
+pre {
+    padding: 0px;
+    font-size: 14px;
+    line-height: 10px;
+    background: #819FF7;  /*#CEE3F6;#dee6f7;   ÎÑÍÎÂÍÎÉ ÖÂÅÒ ÔÎÍÀ */
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+}
+#button1 {
+    text-decoration:none; 
+ text-align:center; 
+ padding:11px 32px; 
+ border:solid 1px #004F72; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px;
+  border-radius: 4px;  font:18px Arial, Helvetica, sans-serif;  
+  font-weight:bold; color:#E5FFFF; 
+  background-color:#3BA4C7; 
+  background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+}
+/*#button:hover {
+  background: #06D85F;
+}*/
+#button2 {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 4px solid #f90;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    
+}
+
+
+  
+/* Step Navigation
+------------------------------------------------------------------------- */
+  
+  .stepNav {
+    margin: 30px 20px;
+    height: 43px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 0;
+    }
+  
+  /* z-index to make sure the buttons stack from left to right */
+  
+  .stepNav li {
+    float: left;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+       -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+    }
+    
+  .stepNav li:first-child {
+    -webkit-border-radius: 5px 0 0 5px;
+       -moz-border-radius: 5px 0 0 5px;
+             border-radius: 5px 0 0 5px;
+    }
+    
+  .stepNav li:nth-child(2) { z-index: 1; }
+  .stepNav li:nth-child(3) { z-index: 0; }
+  
+  /* different widths */
+  
+  .stepNav.threeWide li { width: 33.33%; }
+  
+     /* step links */
+  
+  .stepNav a, .stepNav a:visited {
+    width: 100%;
+    height: 43px;
+    padding: 0 0 0 25px;
+    color: #717171;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    line-height: 43px;
+    white-space: nowrap;
+    border: 1px solid #cbcbcb;
+    text-decoration: none;
+    border-top-color: #dddddd;
+    border-right: 0;
+    background-color: #fbfbfb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(251, 251, 251)), to(rgb(233, 233, 233)));
+    background-image: -webkit-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -moz-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -o-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -ms-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+    float: left;
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+    
+  .stepNav li:first-child a {
+    padding-left: 12px;
+    -webkit-border-radius: 5px 0 0 5px;
+       -moz-border-radius: 5px 0 0 5px;
+             border-radius: 5px 0 0 5px;
+    }
+  
+  .stepNav a:before {
+    content: "";
+    width: 29px;
+    height: 29px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #cbcbcb;
+    background-image: -webkit-gradient(linear, right top, left bottom, from(rgb(251, 251, 251)), to(rgb(233, 233, 233)));
+    background-image: -webkit-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -moz-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -o-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: -ms-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+    background-image: linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: -16px;
+    z-index: -1;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+             transform: rotate(-45deg);
+    }
+    
+  .stepNav a:hover {
+    color: #2e2e2e;
+    background-color: #f5f5f5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(242, 242, 242)), to(rgb(217, 217, 217)));
+    background-image: -webkit-linear-gradient(top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -moz-linear-gradient(top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -o-linear-gradient(top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -ms-linear-gradient(top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: linear-gradient(top, rgb(242, 242, 242), rgb(217, 217, 217));
+    }
+    
+  .stepNav a:hover:before {
+    background-image: -webkit-gradient(linear, right top, left bottom, from(rgb(242, 242, 242)), to(rgb(217, 217, 217)));
+    background-image: -webkit-linear-gradient(right top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -moz-linear-gradient(right top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -o-linear-gradient(right top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: -ms-linear-gradient(right top, rgb(242, 242, 242), rgb(217, 217, 217));
+    background-image: linear-gradient(right top, rgb(242, 242, 242), rgb(217, 217, 217));
+    }
+  
+  /* selected */
+    
+  .stepNav li.selected {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    }
+                
+  .stepNav li.selected a, .stepNav li.selected a:before {
+    background: #ebebeb;
+    }
+    
+  .stepNav li.selected a {
+    border-top-color: #bebebe;
+    -webkit-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+       -moz-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+            box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+    }
+    
+  .stepNav li.selected a:before {
+    border-right: 1px solid #bebebe;
+    border-bottom: 1px solid #cbcbcb;
+    -webkit-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.1);
+       -moz-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.1);
+            box-shadow: inset -1px -1px 1px rgba(0,0,0,0.1);
+    }
+
+#res_window {
+    position: fixed;
+    top: 10;
+    right: 10;
+    width: 100;
+    margin: 70px auto;
+    padding: 20px;
+    background: #aaa;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+
+#footer {
+  /*  position: fixed; */
+    left: 0; bottom: 0; /* Ëåâûé íèæíèé óãîë */
+    padding: 10px; /* Ïîëÿ âîêðóã òåêñòà */
+    background: #666; /* Öâåò ôîíà */
+    color: #fff; /* Öâåò òåêñòà */
+    width: 100%; } 
+/*
+.bs-wizard {margin-top: 40px;}
+
+Form Wizard
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fbbd19; border-radius: 50px; position: absolute; top: 8px; left: 8px; } 
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+END Form Wizard*/

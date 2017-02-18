@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <link rel="shortcut icon" href="http://passwords.lhse.ru/favicon-1.ico" type="image/x-icon">      
+    <title>Генерация паролей</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="./index_files/function.js.Без названия"></script>
+
+    <style>
+
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+      .select1 {
+    color: maroon; 
+    font-weight: 600; 
+       p {
+    font-size: 15px; /* Отступ первой строки в пикселах */
+   }
+    </style>
+  </head>
+
+  <body onload="generate_case()">
+       
+    <ul id="navbar">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="passwords.html">Пароли</a></li>
+    <li><a href="advices.html">Советы</a></li>
+    <li><a href="about.html">О проекте</a></li>
+    </ul>
+
+    <div id="main">
+      <h1>Автор</h1><br>
+      <p>Автор сайта - Курышева Мария, ученица 11 класса лицея НИУ ВШЭ. Этот сайт является её индивидуальным исследовательским проектом.</p>
+      <br><br>
+        <h1>О сайте</h1><br>
+      <p>Сайт помогает решить следующую <span class="select1">проблему</span>:
+        в связи с тем, что некоторые пользователи создают слабые пароли, то не только персональные, 
+        но и служебные данные пользователей находятся в опасности, ведь вычислить эти пароли при необходимости не составляет труда.
+        Одним из самых надежных способов защиты данных являются случайно сгенерированные пароли, однако многим пользователям их
+        сложно запомнить. Поэтому данный проект составит пароль, который связан с некой информацией о пользователе, следовательно,
+        его легче запомнить, и одновременно с этим являющийся надежным.</p>
+      <br>
+      <p>Данный проект не имеет полных аналогов. Конечно же, существуют различные генераторы паролей (полностью случайных),
+      однако проектов, где указывалась бы информация + подробно объяснялось, как составлен пароль, нет.</p>
+      <br><br>
+        <h1>Контактная информация</h1><br>
+        <p>По любым вопросам, связанным с материалом сайта, а также ошибкам, замечаниям и т.д. можно обращаться по указанным координатам:</p>
+        <br><br>
+        <p>maria9ku@gmail.com</p><br><br><br><br><br><br><br><br>
+        </div>
+        <div id="footer"><p>&copy;Курышева Мария, 2017 год</p></div>
+
+  </body>
+</html>

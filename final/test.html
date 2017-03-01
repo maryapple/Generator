@@ -1,0 +1,120 @@
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="/favicon-1.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>Генерация паролей</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    <link href="test.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <ul id="navbar">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="passwords.html">Пароли</a></li>
+      <li><a href="test.html">Викторина</a></li>
+      <li><a href="advices.html">Советы</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+    <br><br>
+    <div style="text-align: center; font-size: 250%; padding: 1000px 0 500 px 0; font-weight: 600; color: #1f2f49;     
+  text-shadow: 2px 2px 0 #cccccc;"><p>Сыграем в викторину!</p></div>
+    <br><br><br><br> 
+    <div id="start" class="quiz-container">
+      <button onclick="start()" class="myButton">Начать тест</button>
+    </div>
+
+    <div id="quiz" class="quiz-container" style="display: none">
+        <div class="question-container">
+            <p style="font-size: 38px;font-weight: bold; padding-top: 2px; color: black;" id="question-text">Текст вопроса</p>
+            <button onclick="check(1)" id="answ1" class="myButton">Ответ 1</button>
+            <button onclick="check(2)" id="answ2" class="myButton">Ответ 2</button>
+            <button onclick="check(3)" id="answ3" class="myButton">Ответ 3</button>
+            <button onclick="check(4)" id="answ4" class="myButton">Ответ 4</button>
+        </div>
+        <br>
+        <div class="comment-container">
+            <div>&nbsp; <span id="comment-text" style="font-size: 28px; color: DarkRed;">Комментарий</span> &nbsp;</div><br>
+            <button onclick="reset()" class="myButton">Начать заново</button>
+            <button onclick="next()" class="myButton">Продолжить ></button>
+        </div>
+    </div>
+
+    <script>
+    var questions = ["Какой из паролей надежней?","Сколько времени составит взлом пароля q1w2e3r4t5y6?","Стоит ли использовать одни и те же пароли на разных сайтах?", "Какая длина пароля лучше всего?",
+         "Какой из паролей взламывается быстрее всего?", "Где лучше всего хранить пароль?", "Какой из паролей сложнее всего?"];
+            var keys = [2, 1, 4, 2, 3, 4, 2];
+            var alreadyAnswered = [false, false, false, false, false, false, false];  // На какие вопросы мы уже давали ответ
+            var answers = [["12345", "ha67ww2", "qwerty", "BANANA"], 
+                            ["12 секунд", "2 недели", "1 месяц", "39 минут"],
+                            ["А какая разница?", "Наверное, да", "Я не знаю", "Нет!"],
+                            ["6 символов", "10 символов", "Это не имеет значения", "100 символов"],
+                            ["lololo123", "trtrtr", "Nina1980", "iamthebest"],
+                            ["В менеджере паролей", "В тетради", "В текстовом файле на рабочем столе", "Лучше просто запомнить его"],
+                            ["nfjkwenj", "Ijk89__6qTy", "ALiii333", "mnbvcxQWERTY"]];
+            var rightComments = ["Да, действительно, в пароле должны быть и буквы, и символы", "В самом деле, такой пароль очень быстро взламывается (простейшим перебором по словарю)", 
+                "Да, действительно, на разных сайтах лучше использовать разные пароли", 
+                "Да, такая длина пароля является наиболее оптимальной", 
+                "Да, этот пароль взламывается быстрее всего, поскольку здесь указано имя этого человека и год рождения, следовательно, зная эту информацию, можно легко угадать пароль", 
+                                 "Да, пароль лучше всего запомнить, ведь в таком случае никто не сможет узнать пароль",
+                                  "Да, этот пароль самый сложный, ведь здесь есть и цифры, и буквы, и спец.символы."];
+            var wrongComments = ["Нет! В надежном пароле должны быть и буквы, и символы. Попробуйте еще раз!",
+                                 "В этом пароле сочетаются qwerty и 123456, что само по себе является очень распространенным, следовательно, его легко угадать. Попробуйте еще раз!",
+                                 "Использовать одни и те жи пароли на разных сайтах не является безопасным для защиты данных, ведь если взломать пароль один раз, то все Ваши аккаунты окажутся незащищенными", 
+                                 "Рекомендуемой длиной пароля является 8-14 символов. Поэтому не стоит делать его не только слишком коротким, но и черезчур длинным", 
+                                 "А вот и нет! Очень часто, зная имя человека и год рождения, можно составить из них комбинацию и отгадать этот пароль.",
+                                 "Нет, это не самый удобный и безопасный способ",
+                                 "Нет! В самом надежном пароле присутствуют не только цифры и буквы разного регистра, но и спец. символы."];
+            var currentQuestion = 0;  // Номер текущего отображаемого вопроса
+            var questionCount = 7;  // Количество вопросов
+            var score = 0;  // Количество правильных ответов (засчитывается только правильный ответ с первой попытки)
+            function start() {
+                reset();
+                document.getElementById("start").style.display = "none"
+                document.getElementById("quiz").style.display = "block"
+            }
+            function check(answer) {
+                if (answer === keys[currentQuestion]) {
+                    if (alreadyAnswered[currentQuestion] === false) {
+                        score += 1;
+                        document.getElementById("comment-text").innerHTML = rightComments[currentQuestion] + " (+1 очко)";
+                    }
+                    else {
+                        document.getElementById("comment-text").innerHTML = rightComments[currentQuestion];
+                    }
+                }
+                else {
+                    document.getElementById("comment-text").innerHTML = wrongComments[currentQuestion];
+                }
+                alreadyAnswered[currentQuestion] = true;
+            }
+            function jump(questionN) {
+                if (questionN == questionCount) {
+                    alert("Спасибо за прохождение теста! Ваш результат: " + score + " из " + questionCount);
+                }
+                else {
+                    currentQuestion = questionN;
+                    document.getElementById("comment-text").innerHTML = "Выберите ответ"
+                    document.getElementById("question-text").innerHTML = questions[currentQuestion];
+                    document.getElementById("answ1").innerHTML = answers[currentQuestion][0];
+                    document.getElementById("answ2").innerHTML = answers[currentQuestion][1];
+                    document.getElementById("answ3").innerHTML = answers[currentQuestion][2];
+                    document.getElementById("answ4").innerHTML = answers[currentQuestion][3];
+                    
+                }
+            }
+            function next() {
+                jump(currentQuestion + 1)
+            }
+            function reset() {
+                score = 0
+                alreadyAnswered = [false, false, false, false, false, false, false];
+                jump(0)
+            }
+    </script>
+
+  <div style="position: fixed; left: 0; bottom: 0; margin: 0; padding: 10px 0 10px 0; 
+    background: #666; color: #fff; width: 100%;"><p>&nbsp &nbsp &copy;Курышева Мария, 2017 год</p></div>
+  </body>
+</html>
